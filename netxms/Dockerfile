@@ -1,4 +1,5 @@
 FROM debian:bullseye
+RUN apt update
 RUN apt install wget lsb-release -y
 RUN wget http://packages.netxms.org/netxms-release-latest.deb
 RUN dpkg -i netxms-release-latest.deb
