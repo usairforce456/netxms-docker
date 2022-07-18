@@ -10,4 +10,6 @@ CMD [echo "createdb -O netxms netxms" | -u root psql]
 CMD [echo "createuser -P netxms" | -u root psql]
 CMD [echo "CREATE EXTENSION IF NOT EXISTS timescaledb CASCADE;" | -u root psql]
 RUN systemctl enable netxmsd
+ENTRYPOINT nxdbmgr init
+
 
